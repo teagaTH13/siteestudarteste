@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyQuest | Plataforma de Estudos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <a href="#" class="brand" data-page="inicio">
+        <span class="brand-icon">✦</span>
+        <span>Study<span>Quest</span></span>
+    </a>
+
+    <nav>
+        <a href="#" data-page="inicio">Início</a>
+        <a href="#" data-page="materias">Matérias</a>
+        <a href="#" data-page="espaco">Meu espaço</a>
+        <a href="#" data-page="comunidade">Comunidade</a>
+    </nav>
+
+    <div class="profile-mini">
+        <div class="avatar">V</div>
+        <span>Você</span>
+    </div>
+</header>
+
+<main>
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="page active">
+        <div class="hero">
+            <div class="hero-text">
+                <span class="eyebrow">CENTRAL DE ESTUDOS</span>
+                <h1>Transforme suas dúvidas em <span>missões.</span></h1>
+                <p>
+                    Organize o que você estuda, compartilhe suas descobertas
+                    e ajude outras pessoas a encontrar respostas.
+                </p>
+                <button class="primary" data-scroll="nova-missao">Criar uma missão</button>
+            </div>
+
+            <div class="hero-card">
+                <div class="quest-top">
+                    <span>⚔️ MISSÃO DO DIA</span>
+                    <span class="difficulty">Nível 2</span>
+                </div>
+                <h3>Como funciona o Flexbox?</h3>
+                <p>Estou começando CSS e não consegui entender a diferença entre justify-content e align-items.</p>
+                <div class="quest-user">
+                    <div class="avatar small">L</div>
+                    <span>Lucas • CSS</span>
+                </div>
+                <div class="quest-footer">
+                    <span>💬 4 respostas</span>
+                    <button class="text-button">Entrar na missão →</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">MURAL DE MISSÕES</span>
+                <h2>Alguém precisa de ajuda</h2>
+            </div>
+            <button class="outline" data-page="comunidade">Ver tudo</button>
+        </div>
+
+        <div class="quest-grid">
+            <article class="quest-card">
+                <div class="quest-number">MISSÃO #0241</div>
+                <h3>Não entendi equação de segundo grau</h3>
+                <p>Alguém consegue explicar de um jeito mais simples?</p>
+                <div class="tags"><span>Matemática</span><span>Iniciante</span></div>
+                <div class="card-bottom"><span>💬 7 respostas</span><span>há 12 min</span></div>
+            </article>
+
+            <article class="quest-card">
+                <div class="quest-number">MISSÃO #0240</div>
+                <h3>Como o JavaScript encontra um elemento?</h3>
+                <p>Estou estudando DOM e fiquei confuso com getElementById.</p>
+                <div class="tags"><span>JavaScript</span><span>Programação</span></div>
+                <div class="card-bottom"><span>💬 3 respostas</span><span>há 35 min</span></div>
+            </article>
+
+            <article class="quest-card">
+                <div class="quest-number">MISSÃO #0239</div>
+                <h3>Qual é a diferença entre força e energia?</h3>
+                <p>Preciso de uma explicação com algum exemplo prático.</p>
+                <div class="tags"><span>Física</span></div>
+                <div class="card-bottom"><span>💬 5 respostas</span><span>há 1 h</span></div>
+            </article>
+        </div>
+
+        <section id="nova-missao" class="create-box">
+            <div>
+                <span class="eyebrow">PRECISA DE AJUDA?</span>
+                <h2>Crie sua própria missão</h2>
+                <p>Publique uma dúvida e deixe outros estudantes tentarem ajudar.</p>
+            </div>
+            <button class="primary" id="abrirMissao">+ Nova missão</button>
+        </section>
+    </section>
+
+    <!-- MATÉRIAS -->
+    <section id="materias" class="page">
+        <div class="page-title">
+            <span class="eyebrow">SEU CAMINHO</span>
+            <h1>Matérias</h1>
+            <p>Escolha uma matéria para explorar conteúdos, atividades, vídeos e anotações.</p>
+        </div>
+
+        <div class="subject-grid">
+            <article class="subject-card" data-subject="Programação">
+                <div class="subject-icon purple">{"<>"}</div>
+                <h3>Programação</h3>
+                <p>HTML, CSS, JavaScript e lógica.</p>
+                <div><b>12</b> conteúdos • <b>4</b> atividades</div>
+            </article>
+
+            <article class="subject-card" data-subject="Matemática">
+                <div class="subject-icon blue">∑</div>
+                <h3>Matemática</h3>
+                <p>Álgebra, funções e exercícios.</p>
+                <div><b>8</b> conteúdos • <b>6</b> atividades</div>
+            </article>
+
+            <article class="subject-card" data-subject="Física">
+                <div class="subject-icon orange">⚡</div>
+                <h3>Física</h3>
+                <p>Movimento, força e energia.</p>
+                <div><b>5</b> conteúdos • <b>3</b> atividades</div>
+            </article>
+
+            <article class="subject-card" data-subject="Inglês">
+                <div class="subject-icon green">A+</div>
+                <h3>Inglês</h3>
+                <p>Vocabulário, gramática e prática.</p>
+                <div><b>10</b> conteúdos • <b>7</b> atividades</div>
+            </article>
+
+            <button class="add-subject" id="novaMateria">+ Criar matéria</button>
+        </div>
+
+        <div id="materiaDetalhes" class="subject-detail hidden">
+            <button class="back" id="fecharMateria">← Voltar</button>
+            <div class="detail-header">
+                <div class="subject-icon purple" id="detalheIcone">&lt;&gt;</div>
+                <div>
+                    <span class="eyebrow">MATÉRIA</span>
+                    <h2 id="detalheNome">Programação</h2>
+                    <p>Seu caderno de estudos compartilhável.</p>
+                </div>
+            </div>
+
+            <div class="content-tabs">
+                <button class="tab active">📝 Anotações</button>
+                <button class="tab">🎯 Atividades</button>
+                <button class="tab">🎥 Vídeos</button>
+                <button class="tab">💡 Dicas</button>
+            </div>
+
+            <div class="notes-grid">
+                <article class="note">
+                    <span class="note-type">ANOTAÇÃO</span>
+                    <h3>O que finalmente entendi sobre o DOM</h3>
+                    <p>O JavaScript consegue acessar e modificar elementos do HTML através do DOM. O getElementById busca um elemento pelo seu id.</p>
+                    <div class="note-footer">Você • hoje • 💬 2</div>
+                </article>
+                <article class="note">
+                    <span class="note-type video">VÍDEO</span>
+                    <h3>Introdução ao JavaScript</h3>
+                    <p>Um vídeo que usei para entender variáveis, funções e os primeiros conceitos da linguagem.</p>
+                    <div class="note-footer">Você • ontem • 🔗 link</div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEU ESPAÇO -->
+    <section id="espaco" class="page">
+        <div class="profile-cover">
+            <div class="avatar big">V</div>
+            <div>
+                <span class="eyebrow">MEU ESPAÇO</span>
+                <h1>Seu perfil de estudos</h1>
+                <p>Um lugar para organizar e compartilhar sua evolução.</p>
+            </div>
+            <div class="level">
+                <span>NÍVEL 4</span>
+                <strong>420 XP</strong>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div><strong>4</strong><span>Matérias</span></div>
+            <div><strong>18</strong><span>Atividades</span></div>
+            <div><strong>11</strong><span>Anotações</span></div>
+            <div><strong>7</strong><span>Missões resolvidas</span></div>
+        </div>
+
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">SEU CONTEÚDO</span>
+                <h2>Continue estudando</h2>
+            </div>
+        </div>
+
+        <div class="my-content">
+            <article><span>💻</span><div><h3>Programação</h3><p>Você parou em: DOM e eventos</p></div><b>65%</b></article>
+            <article><span>∑</span><div><h3>Matemática</h3><p>Você parou em: Equação do 2º grau</p></div><b>40%</b></article>
+            <article><span>🇺🇸</span><div><h3>Inglês</h3><p>Você parou em: Present Perfect</p></div><b>72%</b></article>
+        </div>
+    </section>
+
+    <!-- COMUNIDADE -->
+    <section id="comunidade" class="page">
+        <div class="page-title">
+            <span class="eyebrow">COMUNIDADE</span>
+            <h1>O que outras pessoas estão estudando</h1>
+            <p>Descubra anotações, dicas e atividades compartilhadas por outros estudantes.</p>
+        </div>
+
+        <div class="feed">
+            <article class="post">
+                <div class="post-head">
+                    <div class="avatar">A</div>
+                    <div><strong>Ana</strong><span>está estudando Física • há 20 min</span></div>
+                </div>
+                <h3>Finalmente entendi as leis de Newton!</h3>
+                <p>Minha dica foi imaginar cada força como uma "puxada" ou "empurrão". Fazer desenhos antes da conta me ajudou muito.</p>
+                <div class="post-actions"><button>♡ Curtir</button><button>💬 Comentar</button><span>12 curtidas</span></div>
+            </article>
+
+            <article class="post">
+                <div class="post-head">
+                    <div class="avatar">C</div>
+                    <div><strong>Caio</strong><span>compartilhou uma atividade • há 1 h</span></div>
+                </div>
+                <h3>Desafio de JavaScript</h3>
+                <p>Criei um exercício para praticar arrays e forEach. Quem quiser tentar pode comentar como resolveu.</p>
+                <div class="code-preview">const nomes = ["Ana", "João", "Carlos"];<br>nomes.forEach(nome =&gt; console.log(nome));</div>
+                <div class="post-actions"><button>♡ Curtir</button><button>💬 Comentar</button><span>8 curtidas</span></div>
+            </article>
+
+            <article class="post">
+                <div class="post-head">
+                    <div class="avatar">M</div>
+                    <div><strong>Marina</strong><span>compartilhou uma dica • há 2 h</span></div>
+                </div>
+                <h3>Uma técnica que está funcionando para mim</h3>
+                <p>Depois de estudar uma matéria, tento explicar o conteúdo com minhas próprias palavras. Quando não consigo, volto naquele ponto.</p>
+                <div class="tags"><span>Estudo</span><span>Dicas</span></div>
+                <div class="post-actions"><button>♡ Curtir</button><button>💬 Comentar</button><span>19 curtidas</span></div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<!-- MODAL NOVA MISSÃO -->
+<div class="modal hidden" id="modalMissao">
+    <div class="modal-box">
+        <button class="close" id="fecharModal">×</button>
+        <span class="eyebrow">NOVA MISSÃO</span>
+        <h2>Qual é a sua dúvida?</h2>
+        <label>Título da missão</label>
+        <input id="tituloMissao" placeholder="Ex.: Não entendi funções de 2º grau">
+        <label>Explique o que você precisa</label>
+        <textarea id="textoMissao" placeholder="Conte um pouco sobre sua dúvida..."></textarea>
+        <label>Matéria</label>
+        <select>
+            <option>Programação</option>
+            <option>Matemática</option>
+            <option>Física</option>
+            <option>Inglês</option>
+        </select>
+        <button class="primary full" id="publicarMissao">Publicar missão</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
